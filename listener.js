@@ -5,13 +5,33 @@ function clickHandler(o,recursive) {
         var objects = $("#mediaarticlebody p").text();
         //alert(objects);
         var exist=0;
+        var showlist="";
+        var showlist2="";
+
         for(var i=0;i<LyList.length;i++){
             var reg = new RegExp(LyList[i].name);
             if(reg.test(objects)){
+                if(LyList[i].name == "丁守中")
+                {
+                	window.open("http://www.ly.gov.tw/03_leg/0301_main/legIntro.action?lgno=00001&stage=8","show","toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=no,fullscreen=yes");
+                }
+
+                //window.open("http://www.ly.gov.tw/03_leg/0301_main/legIntro.action?lgno=0000"+ i +"&stage=8","show"+i,"toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,resizable=no,fullscreen=yes");
                 exist++;
-                alert(LyList[i].name+" "+LyList[i].party);    
+                showlist = showlist.concat(showlist,LyList[i].name+" "+LyList[i].party+'\n');
+                
+                //alert(LyList[i].name+" "+LyList[i].party);    
             }
         }
+        //http://webdesign.kerthis.com/jquery/jquery_manipulation
+        //$.cookie('the_cookie', 'the_value');
+        //$.ajax({ url: "test.html", context: document.body});
+
+        
+
+
+        //showlist = showlist.concat("1","2");
+        alert(showlist);    
         if(exist == 0)
         {
             alert("此頁面沒有立委");    
