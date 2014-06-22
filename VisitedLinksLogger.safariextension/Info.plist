@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>Author</key>
-	<string>testate</string>
+	<string>Walid Karray</string>
 	<key>Builder Version</key>
-	<string>9537.75.14</string>
+	<string>9537.76.4</string>
 	<key>CFBundleDisplayName</key>
-	<string>test</string>
+	<string>Visited Links Logger</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.yourcompany.test</string>
+	<string>tn.walid.vlinklog</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleShortVersionString</key>
@@ -18,36 +18,8 @@
 	<string>1</string>
 	<key>Chrome</key>
 	<dict>
-		<key>Database Quota</key>
-		<real>1048576</real>
 		<key>Global Page</key>
 		<string>global.html</string>
-		<key>Menus</key>
-		<array>
-			<dict>
-				<key>Identifier</key>
-				<string>test</string>
-				<key>Menu Items</key>
-				<array>
-					<dict>
-						<key>Checked State</key>
-						<real>1</real>
-						<key>Disabled</key>
-						<false/>
-						<key>Identifier</key>
-						<string>test</string>
-						<key>Image</key>
-						<string>icon.png</string>
-						<key>Separator</key>
-						<true/>
-						<key>Submenu</key>
-						<string>test</string>
-						<key>Title</key>
-						<string>test</string>
-					</dict>
-				</array>
-			</dict>
-		</array>
 		<key>Popovers</key>
 		<array>
 			<dict>
@@ -56,27 +28,45 @@
 				<key>Height</key>
 				<real>400</real>
 				<key>Identifier</key>
-				<string>pop</string>
+				<string>myPopover</string>
 				<key>Width</key>
 				<real>400</real>
+			</dict>
+			<dict>
+				<key>Filename</key>
+				<string>popover2.html</string>
+				<key>Height</key>
+				<real>800</real>
+				<key>Identifier</key>
+				<string>test</string>
+				<key>Width</key>
+				<real>500</real>
 			</dict>
 		</array>
 		<key>Toolbar Items</key>
 		<array>
 			<dict>
+				<key>Command</key>
+				<string></string>
+				<key>Identifier</key>
+				<string>show-popover</string>
+				<key>Image</key>
+				<string>Net Button.safariextension/icon.png</string>
+				<key>Include By Default</key>
+				<true/>
+				<key>Label</key>
+				<string>LinkHistory</string>
+				<key>Popover</key>
+				<string>myPopover</string>
+			</dict>
+			<dict>
 				<key>Identifier</key>
 				<string>test</string>
 				<key>Image</key>
-				<string>icon.png</string>
+				<string>Icon-32.png</string>
 				<key>Label</key>
 				<string>test</string>
-				<key>Menu</key>
-				<string></string>
-				<key>Palette Label</key>
-				<string>test</string>
 				<key>Popover</key>
-				<string>pop</string>
-				<key>Tool Tip</key>
 				<string>test</string>
 			</dict>
 		</array>
@@ -87,6 +77,8 @@
 		<dict>
 			<key>End</key>
 			<array>
+				<string>myscript.js</string>
+				<string>data.js</string>
 				<string>listener.js</string>
 			</array>
 			<key>Start</key>
@@ -94,9 +86,13 @@
 				<string>jquery-1.7.min.js</string>
 			</array>
 		</dict>
+		<key>Stylesheets</key>
+		<array>
+			<string>mystyles.css</string>
+		</array>
 	</dict>
 	<key>Description</key>
-	<string>123</string>
+	<string>Visited Link Logger</string>
 	<key>ExtensionInfoDictionaryVersion</key>
 	<string>1.0</string>
 	<key>Permissions</key>
@@ -109,5 +105,7 @@
 			<string>All</string>
 		</dict>
 	</dict>
+	<key>Website</key>
+	<string>http://walid.tn</string>
 </dict>
 </plist>

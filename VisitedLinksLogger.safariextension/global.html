@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+   <head>
+    <script type="text/javascript" charset="utf-8">
+        const gui = safari.extension.popovers[0].contentWindow //Create the popover instance
+        const mygui = safari.extension.popovers[1].contentWindow //Create the popover 
+		function handleMessage(msg){
+				if (msg.name == "link"){
+					//exectue addLink() inside popover
+					gui.addLink(msg.message);
+				}
+				if (msg.name == "name"){
+                    //exectue addLink() inside popover
+                    mygui.addLink(msg.message);                
+                }
+
+		}
+		//creating the event listener
+		safari.application.addEventListener("message",handleMessage, false);
+     </script>
+   </head>
+   <body></body>
+</html>
